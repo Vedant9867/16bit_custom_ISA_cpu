@@ -52,19 +52,26 @@ mul_signed = 1'b0;
          wr_signal = 1'b1;
          use_carry_flg = 1'b0; // for add with carry or sub with borrow
          alu_op = 4'b0000;
+         flag_write = 1'b1;   
+         flag_source = 1'b0;
       end
       4'b0001:begin//  ADC R1,R2
          B_operand = 1'b0;// why i will interface this with b_select_imm of alu which selects imm when 1
          wr_signal = 1'b1;
          use_carry_flg = 1'b1; // for add with carry or sub with borrow
          alu_op = 4'b0000;
+         flag_write = 1'b1;   
+         flag_source = 1'b0;
       end   
       4'b0010:begin// ADI R1,#IMM
+      
          B_operand = 1'b1;
          wr_signal = 1'b1;
          use_carry_flg = 1'b0;
          alu_op = 4'b0000;   
          extract_imm = instruction[3:0];
+         flag_write = 1'b1;   
+         flag_source = 1'b0;
       end 
      endcase
     end
@@ -361,6 +368,8 @@ end
             wr_signal = 1'b1;
             use_carry_flg = 1'b0;
             alu_op = 4'b0001;
+            flag_write = 1'b1;   
+            flag_source = 1'b0;
         end
 
         4'b0001:begin // SBB R1,R2
@@ -368,6 +377,8 @@ end
             wr_signal = 1'b1;
             use_carry_flg = 1'b1;
             alu_op = 4'b0001;
+            flag_write = 1'b1;   
+            flag_source = 1'b0;
         end
 
         4'b0010:begin // SUBI R1,#imm
@@ -376,10 +387,15 @@ end
             use_carry_flg = 1'b0;
             extract_imm = instruction[3:0];
             alu_op = 4'b0001;
+            flag_write = 1'b1;   
+            flag_source = 1'b0;
         end
     endcase
 end 
 4'b1110:begin // INR / DCR
+    flag_write = 1'b1;    
+    flag_source = 1'b0;    
+    
     case(sub_op)
 
         4'b0000:begin // ICO +1

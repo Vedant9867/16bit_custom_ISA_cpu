@@ -63,10 +63,11 @@ register_16bit Rn(
 );
 // register write function is over what about read
 //register read 
-assign rd_data1 = registers_out[rd_ad1];
-assign rd_data2 = registers_out[rd_ad2];
+
 // this will read the reg data from given address in the opcode sent to alu for calculation alu gives output and that output will be stored in the destination register theough write function
 
 end
 endgenerate
+assign rd_data1 = registers_out[rd_ad1];
+assign rd_data2 = registers_out[rd_ad2];
 endmodule
