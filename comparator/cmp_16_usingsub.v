@@ -19,11 +19,11 @@ module cmp_16_usingsub(
      cska_16bit_sub subtractor_inst (
         .A(A),
         .B(B),
+        .Bin(1'b0),//not required borrow here
         .Diff(diff_out),
         .Bin_msb(bin_msb_out), 
         .Bout(bout_out)
     );
-
     
    assign Z = (diff_out == 16'h0000);   
    assign Bout= bout_out;                 // Turn adder Cout into Borrow-Out

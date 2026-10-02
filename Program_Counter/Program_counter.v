@@ -7,7 +7,7 @@ module Program_counter(
     input HLT,
     input jump_signal,
     input [15:0]Pc_target,
-    output reg PC
+    output reg[15:0] PC
     );
     wire[15:0] Pc_inc;
     wire[15:0] Pc_nxt;
@@ -27,6 +27,6 @@ module Program_counter(
         else if(HLT)
           PC<= PC;  
         else
-          PC<= PC_nxt;
+          PC<= Pc_nxt;
     end
 endmodule
