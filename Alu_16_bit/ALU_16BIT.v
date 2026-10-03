@@ -108,7 +108,9 @@ module Alu_16_bit(
             4'b0110: result_reg = mul_result;
             4'b0111: result_reg = 32'b0;//COMPARE
             4'b1000:  result_reg = {16'd0,shift_result};
-            4'b1001: result_reg = {16'b0,operand_B};//mov operation
+            4'b1001: result_reg = {16'b0,operand_B};//mov operation. pass b operation used also for loading opcode
+            4'b1010: result_reg = {16'b0, A};   //pass a operation used for store operation as str [r1],r2 requires us first 
+            //toaccess r1 value which is the adderess we want to store the value of r2 reg
             default: ;
         endcase
     end
