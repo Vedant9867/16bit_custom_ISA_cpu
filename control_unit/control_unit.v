@@ -243,6 +243,7 @@ end
     mem_read = 1'b1;
     mem_to_reg = 1'b1;
     wr_signal = 1'b1;
+    alu_op = 4'b1001;
   end
  endcase
 end  
@@ -252,12 +253,14 @@ end
     B_operand = 1'b0;
     mem_write = 1'b1;
     wr_signal = 1'b0;
+    alu_op = 4'b1010;
  end 
  4'b0010:begin//str [r1],imm
      B_operand = 1'b1;
      mem_write = 1'b1;
      wr_signal = 1'b0;
      extract_imm = instruction[3:0];
+     alu_op= 4'b1010;
    end
  endcase
 end 
