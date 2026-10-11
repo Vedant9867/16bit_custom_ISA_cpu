@@ -19,7 +19,7 @@ module Program_counter(
       .Cout(),
       .Cin_msb()
     );
-    assign PC_nxt = jump_signal ? Pc_target : Pc_inc;
+    assign Pc_nxt = jump_signal ? Pc_target : Pc_inc;
     //pc register design
     always @(posedge clck) begin
         if(RST)//RST would be one for first cycle and then 0 for next 

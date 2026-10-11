@@ -8,8 +8,8 @@ module mux2_1_16bit(
     );
     always @(*) begin
         case(S)
-        1'b0: Out <= A;
-        1'b1: Out <= B;
+        1'b0: Out = A;
+        1'b1: Out = B;
         endcase
     end
     
