@@ -100,7 +100,7 @@ output [6:0]  flags_out
     register_file rf(
         .rd_ad1(rd_ad1),
         .rd_ad2(rd_ad2),
-        .clck(clk),
+        .clck(clck),
         .wr_ad(wr_ad),
         .wr_data(wr_data),
         .wr_signal(wr_signal),
@@ -136,12 +136,12 @@ output [6:0]  flags_out
 
     flag_register flags(
         .flag_in(flags_next),
-        .clck(clk),
+        .clck(clck),
         .wr_signal(flag_write),
         .flag_out(flag_out)
     );
     data_memory dmem(
-        .clck(clk),
+        .clck(clck),
         .mem_write(mem_write),
         .address(alu_result),
         .write_data(store_data),
