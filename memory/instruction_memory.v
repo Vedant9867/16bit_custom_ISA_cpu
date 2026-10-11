@@ -7,5 +7,5 @@ module instruction_memory(
     );
     reg [15:0] memory [0:255];//this is memory of 256 instructions
    
-    assign instruction = memory[memadr_instr];
+    assign instruction = memory[memadr_instr[7:0]];
 endmodule

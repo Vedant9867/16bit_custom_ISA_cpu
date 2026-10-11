@@ -57,8 +57,8 @@ output [6:0]  flags_out
                                             : {8'b0, offset};
                                             
      Program_counter pc_unit(
-        .clck(clk),
-        .RST(rst | reset_pc),
+        .clck(clck),
+        .RST(reset | reset_pc),
         .HLT(halt_pc),
         .jump_signal(branching),
         .Pc_target(pc_target),

@@ -5,6 +5,7 @@ input enable_signal,
 input clck,
 output reg Q
 );
+initial Q = 1'b0;
 always @(posedge clck)begin
 if(enable_signal)
  Q <= D;
@@ -70,7 +71,7 @@ generate
 
 for(j = 0; j<16;j=j+1) begin:register_instances
 register_16bit Rn(
-.data(wr_data),
+.data(reg_din[j]),
 .clck(clck),
 .wr_signal(register_en[j]),
 .q(registers_out[j])

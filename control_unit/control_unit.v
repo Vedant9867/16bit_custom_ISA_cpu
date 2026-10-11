@@ -82,28 +82,28 @@ mul_hi_wr = 1'b0;
         4'b0000: begin // L-shift R1, R2
             B_operand = 1'b0;
             wr_signal = 1'b1;
-            shift_type = 3'b000;
+            shift_type = 3'b001;
             alu_op = 4'b1000;
          
         end
         4'b0001: begin // L-shift R1, imm
             B_operand = 1'b1;
             wr_signal = 1'b1;
-            shift_type = 3'b000;
+            shift_type = 3'b001;
             alu_op = 4'b1000;
             extract_imm = instruction[3:0];
         end
         4'b0010: begin   // r-shift R1, R2
             B_operand = 1'b0;
             wr_signal = 1'b1;
-            shift_type = 3'b001;
+            shift_type = 3'b000;
             alu_op = 4'b1000;
            
         end
         4'b0011: begin// R-shift R1, #imm
             B_operand = 1'b1;
             wr_signal = 1'b1;
-            shift_type = 3'b001;
+            shift_type = 3'b000;
             alu_op = 4'b1000;
             extract_imm = instruction[3:0];
         end
