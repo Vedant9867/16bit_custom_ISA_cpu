@@ -79,7 +79,8 @@ module Alu_16_bit(
         .data(A),
         .shift_amt(operand_B),
         .shift_type(Shift_type),//last bit of alu_sub_op denotes if operation is with B reg or imm
-        .out(shift_result)
+        .out(shift_result),
+        .carry_out(carry_out)
     );
     reg [31:0] result_reg;
     reg  carry_reg,overflow_reg;
