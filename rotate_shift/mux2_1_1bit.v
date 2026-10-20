@@ -9,6 +9,6 @@ module mux2_1_1bit(
     case(S)
     1'b0: Out = A;
     1'b1: Out = B;
-    endcase;
+    endcase
   end
 endmodule
