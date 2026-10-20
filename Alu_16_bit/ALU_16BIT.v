@@ -21,7 +21,7 @@ module Alu_16_bit(
     output Z,N,V, // this are the comparator flags required for branch instruction
     output [6:0] flags_next // drives input for flag register 
 );
-
+    wire shift_carry;
     wire [15:0] operand_B=B_select_imm ? {12'b0, imm} : B;
     // ADDER
     wire [15:0] add_result;
@@ -80,7 +80,7 @@ module Alu_16_bit(
         .shift_amt(operand_B),
         .shift_type(Shift_type),//last bit of alu_sub_op denotes if operation is with B reg or imm
         .out(shift_result),
-        .carry_out(carry_out)
+        .carry_out(shift_carry)
     );
     reg [31:0] result_reg;
     reg  carry_reg,overflow_reg;
@@ -108,7 +108,10 @@ module Alu_16_bit(
             4'b0101: result_reg = {16'd0,~A};
             4'b0110: result_reg = mul_result;
             4'b0111: result_reg = 32'b0;//COMPARE
-            4'b1000:  result_reg = {16'd0,shift_result};
+            4'b1000:begin
+              result_reg = {16'd0,shift_result};
+              carry_reg  = shift_carry;
+              end
             4'b1001: result_reg = {16'b0,operand_B};//mov operation. pass b operation used also for loading opcode
             4'b1010: result_reg = {16'b0, A};   //pass a operation used for store operation as str [r1],r2 requires us first 
             //toaccess r1 value which is the adderess we want to store the value of r2 reg

@@ -78,6 +78,8 @@ mul_hi_wr = 1'b0;
      endcase
     end
   4'b0011:begin
+     flag_write = 1'b1;
+     flag_source = 1'b0;
     case(sub_op)
         4'b0000: begin // L-shift R1, R2
             B_operand = 1'b0;
