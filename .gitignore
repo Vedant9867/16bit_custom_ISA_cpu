@@ -1,12 +1,22 @@
-# Vivado generated files
+# Vivado projects and generated files
+build/
 *.cache/
 *.runs/
 *.hw/
 *.sim/
 *.ip_user_files/
 *.gen/
-
-# Vivado generated logs
 *.jou
 *.log
 *.str
+*.pb
+*.dcp
+.Xil/
+# Simulation output
+*.vcd
+*.wdb
+*.vvp
+xsim.dir/
+# OS / editor
+.DS_Store
+Thumbs.db

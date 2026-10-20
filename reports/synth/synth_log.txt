@@ -1,0 +1,644 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Oct 20 13:05:58 2026
+# Process ID         : 12756
+# Current directory  : D:/digital/hv_project/hv_project.runs/synth_1
+# Command line       : vivado.exe -log cpu_datapath.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu_datapath.tcl
+# Log file           : D:/digital/hv_project/hv_project.runs/synth_1/cpu_datapath.vds
+# Journal file       : D:/digital/hv_project/hv_project.runs/synth_1\vivado.jou
+# Running On         : VEDANT
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26300
+# Processor Detail   : AMD Ryzen 7 7445HS w/ Radeon 740M Graphics     
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16357 MB
+# Swap memory        : 5905 MB
+# Total Virtual      : 22262 MB
+# Available Virtual  : 3339 MB
+#-----------------------------------------------------------
+source cpu_datapath.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental D:/digital/hv_project/hv_project.srcs/utils_1/imports/synth_1/cpu_datapath.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/digital/hv_project/hv_project.srcs/utils_1/imports/synth_1/cpu_datapath.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top cpu_datapath -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24828
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 778.520 ; gain = 474.453
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cpu_datapath' [D:/custom_cpu_hv/cpu_datapath/cpu_datapath.v:4]
+INFO: [Synth 8-6157] synthesizing module 'Program_counter' [D:/custom_cpu_hv/Program_Counter/Program_counter.v:4]
+INFO: [Synth 8-6157] synthesizing module 'Cska_adder16_bit' [D:/custom_cpu_hv/adder/Cska_adder16_bit.v:38]
+INFO: [Synth 8-6157] synthesizing module 'Cska_adder_4bit' [D:/custom_cpu_hv/adder/Cska_adder16_bit.v:4]
+INFO: [Synth 8-6157] synthesizing module 'fa1bit' [D:/custom_cpu_hv/adder/fa16.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'fa1bit' (0#1) [D:/custom_cpu_hv/adder/fa16.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mux2_1_1bit' [D:/custom_cpu_hv/rotate_shift/mux2_1_1bit.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'mux2_1_1bit' (0#1) [D:/custom_cpu_hv/rotate_shift/mux2_1_1bit.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Cska_adder_4bit' (0#1) [D:/custom_cpu_hv/adder/Cska_adder16_bit.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'Cska_adder16_bit' (0#1) [D:/custom_cpu_hv/adder/Cska_adder16_bit.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'Program_counter' (0#1) [D:/custom_cpu_hv/Program_Counter/Program_counter.v:4]
+INFO: [Synth 8-6157] synthesizing module 'instruction_memory' [D:/custom_cpu_hv/memory/instruction_memory.v:4]
+INFO: [Synth 8-3876] $readmem data file 'program.mem' is read successfully [D:/custom_cpu_hv/memory/instruction_memory.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'instruction_memory' (0#1) [D:/custom_cpu_hv/memory/instruction_memory.v:4]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [D:/custom_cpu_hv/control_unit/control_unit.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/custom_cpu_hv/control_unit/control_unit.v:51]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/custom_cpu_hv/control_unit/control_unit.v:83]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/custom_cpu_hv/control_unit/control_unit.v:158]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/custom_cpu_hv/control_unit/control_unit.v:227]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/custom_cpu_hv/control_unit/control_unit.v:244]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/custom_cpu_hv/control_unit/control_unit.v:255]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/custom_cpu_hv/control_unit/control_unit.v:272]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/custom_cpu_hv/control_unit/control_unit.v:277]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/custom_cpu_hv/control_unit/control_unit.v:282]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/custom_cpu_hv/control_unit/control_unit.v:297]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/custom_cpu_hv/control_unit/control_unit.v:313]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/custom_cpu_hv/control_unit/control_unit.v:329]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/custom_cpu_hv/control_unit/control_unit.v:338]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/custom_cpu_hv/control_unit/control_unit.v:356]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/custom_cpu_hv/control_unit/control_unit.v:374]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/custom_cpu_hv/control_unit/control_unit.v:408]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (0#1) [D:/custom_cpu_hv/control_unit/control_unit.v:3]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [D:/custom_cpu_hv/REGISTERS/register_file.v:35]
+INFO: [Synth 8-6157] synthesizing module 'register_16bit' [D:/custom_cpu_hv/REGISTERS/register_file.v:15]
+INFO: [Synth 8-6157] synthesizing module 'dff' [D:/custom_cpu_hv/REGISTERS/register_file.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'dff' (0#1) [D:/custom_cpu_hv/REGISTERS/register_file.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'register_16bit' (0#1) [D:/custom_cpu_hv/REGISTERS/register_file.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (0#1) [D:/custom_cpu_hv/REGISTERS/register_file.v:35]
+INFO: [Synth 8-6157] synthesizing module 'Alu_16_bit' [D:/custom_cpu_hv/Alu_16_bit/ALU_16BIT.v:3]
+INFO: [Synth 8-6157] synthesizing module 'cska_16bit_sub' [D:/custom_cpu_hv/subtractor/cska_16bit-sub.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'cska_16bit_sub' (0#1) [D:/custom_cpu_hv/subtractor/cska_16bit-sub.v:4]
+INFO: [Synth 8-6157] synthesizing module 'booth_multiplier_16bit' [D:/custom_cpu_hv/booth_multiplier/booth_multiplier_16bit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'booth_multiplier_16bit' (0#1) [D:/custom_cpu_hv/booth_multiplier/booth_multiplier_16bit.v:3]
+INFO: [Synth 8-6157] synthesizing module 'cmp_16_usingsub' [D:/custom_cpu_hv/comparator/cmp_16_usingsub.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'cmp_16_usingsub' (0#1) [D:/custom_cpu_hv/comparator/cmp_16_usingsub.v:4]
+INFO: [Synth 8-6157] synthesizing module 'shifter_unit_combine' [D:/custom_cpu_hv/rotate_shift/shifter_unit_combine.v:3]
+INFO: [Synth 8-6157] synthesizing module 'left_rotate' [D:/custom_cpu_hv/rotate_shift/left_rotate.v:4]
+INFO: [Synth 8-6157] synthesizing module 'mux2_1_16bit' [D:/custom_cpu_hv/rotate_shift/bit16_2_1mux.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mux2_1_16bit' (0#1) [D:/custom_cpu_hv/rotate_shift/bit16_2_1mux.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'left_rotate' (0#1) [D:/custom_cpu_hv/rotate_shift/left_rotate.v:4]
+INFO: [Synth 8-6157] synthesizing module 'rotator16bit' [D:/custom_cpu_hv/rotate_shift/rotator16bit.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'rotator16bit' (0#1) [D:/custom_cpu_hv/rotate_shift/rotator16bit.v:7]
+INFO: [Synth 8-6157] synthesizing module 'right_shift' [D:/custom_cpu_hv/rotate_shift/right_shift.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'right_shift' (0#1) [D:/custom_cpu_hv/rotate_shift/right_shift.v:3]
+INFO: [Synth 8-6157] synthesizing module 'left_shift' [D:/custom_cpu_hv/rotate_shift/left_shift.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'left_shift' (0#1) [D:/custom_cpu_hv/rotate_shift/left_shift.v:3]
+INFO: [Synth 8-6157] synthesizing module 'arithmetic_shift16' [D:/custom_cpu_hv/rotate_shift/arithmetic_shuft16.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'arithmetic_shift16' (0#1) [D:/custom_cpu_hv/rotate_shift/arithmetic_shuft16.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'shifter_unit_combine' (0#1) [D:/custom_cpu_hv/rotate_shift/shifter_unit_combine.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Alu_16_bit' (0#1) [D:/custom_cpu_hv/Alu_16_bit/ALU_16BIT.v:3]
+INFO: [Synth 8-6157] synthesizing module 'flag_register' [D:/custom_cpu_hv/REGISTERS/flag_register.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'flag_register' (0#1) [D:/custom_cpu_hv/REGISTERS/flag_register.v:3]
+INFO: [Synth 8-6157] synthesizing module 'data_memory' [D:/custom_cpu_hv/memory/data_memory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'data_memory' (0#1) [D:/custom_cpu_hv/memory/data_memory.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_datapath' (0#1) [D:/custom_cpu_hv/cpu_datapath/cpu_datapath.v:4]
+WARNING: [Synth 8-7129] Port address[15] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[14] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[13] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[12] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[11] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[10] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[9] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address[8] in module data_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port N in module control_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memadr_instr[15] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memadr_instr[14] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memadr_instr[13] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memadr_instr[12] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memadr_instr[11] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memadr_instr[10] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memadr_instr[9] in module instruction_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memadr_instr[8] in module instruction_memory is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 891.949 ; gain = 587.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 891.949 ; gain = 587.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 891.949 ; gain = 587.883
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 891.949 ; gain = 587.883
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   17 Bit       Adders := 33    
+	   2 Input   16 Bit       Adders := 1     
++---XORs : 
+	   2 Input     16 Bit         XORs := 1     
+	   2 Input      4 Bit         XORs := 16    
+	   3 Input      1 Bit         XORs := 64    
+	   2 Input      1 Bit         XORs := 4     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 263   
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   3 Input   17 Bit        Muxes := 33    
+	   2 Input   16 Bit        Muxes := 43    
+	  16 Input    8 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 1     
+	  11 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 8     
+	   3 Input    4 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 1     
+	   9 Input    4 Bit        Muxes := 1     
+	  16 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 5     
+	   2 Input    2 Bit        Muxes := 4     
+	   3 Input    2 Bit        Muxes := 30    
+	   2 Input    1 Bit        Muxes := 33    
+	   4 Input    1 Bit        Muxes := 4     
+	  11 Input    1 Bit        Muxes := 2     
+	   3 Input    1 Bit        Muxes := 1     
+	   9 Input    1 Bit        Muxes := 2     
+	  16 Input    1 Bit        Muxes := 11    
+	   6 Input    1 Bit        Muxes := 1     
+	  12 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port N in module control_unit is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1131.969 ; gain = 827.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++-------------------+------------+---------------+----------------+
+|Module Name        | RTL Object | Depth x Width | Implemented As | 
++-------------------+------------+---------------+----------------+
+|instruction_memory | memory     | 32x16         | LUT            | 
+|cpu_datapath       | p_0_out    | 32x16         | LUT            | 
++-------------------+------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-------------+-----------------+-----------+----------------------+-----------------+
+|Module Name  | RTL Object      | Inference | Size (Depth x Width) | Primitives      | 
++-------------+-----------------+-----------+----------------------+-----------------+
+|cpu_datapath | dmem/memory_reg | Implied   | 256 x 16             | RAM256X1S x 16  | 
++-------------+-----------------+-----------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1140.824 ; gain = 836.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-------------+-----------------+-----------+----------------------+-----------------+
+|Module Name  | RTL Object      | Inference | Size (Depth x Width) | Primitives      | 
++-------------+-----------------+-----------+----------------------+-----------------+
+|cpu_datapath | dmem/memory_reg | Implied   | 256 x 16             | RAM256X1S x 16  | 
++-------------+-----------------+-----------+----------------------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1141.039 ; gain = 836.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1271.465 ; gain = 967.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1271.465 ; gain = 967.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1271.465 ; gain = 967.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1271.465 ; gain = 967.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1271.465 ; gain = 967.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1271.465 ; gain = 967.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |   168|
+|3     |LUT1      |     1|
+|4     |LUT2      |   145|
+|5     |LUT3      |   162|
+|6     |LUT4      |   327|
+|7     |LUT5      |   372|
+|8     |LUT6      |   591|
+|9     |MUXF7     |    69|
+|10    |MUXF8     |    31|
+|11    |RAM256X1S |    16|
+|12    |FDRE      |   279|
+|13    |IBUF      |     2|
+|14    |OBUF      |    55|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------------------------------+-----------------------+------+
+|      |Instance                         |Module                 |Cells |
++------+---------------------------------+-----------------------+------+
+|1     |top                              |                       |  2219|
+|2     |  alu                            |Alu_16_bit             |   181|
+|3     |    multiplier1                  |booth_multiplier_16bit |   181|
+|4     |  dmem                           |data_memory            |    16|
+|5     |  flags                          |flag_register          |    10|
+|6     |    \flag_dff[0].flag_instance   |dff_270                |     1|
+|7     |    \flag_dff[1].flag_instance   |dff_271                |     2|
+|8     |    \flag_dff[2].flag_instance   |dff_272                |     1|
+|9     |    \flag_dff[3].flag_instance   |dff_273                |     3|
+|10    |    \flag_dff[4].flag_instance   |dff_274                |     1|
+|11    |    \flag_dff[5].flag_instance   |dff_275                |     1|
+|12    |    \flag_dff[6].flag_instance   |dff_276                |     1|
+|13    |  pc_unit                        |Program_counter        |   782|
+|14    |  rf                             |register_file          |  1172|
+|15    |    \register_instances[0].Rn    |register_16bit         |    16|
+|16    |      \dff16_inst[0].instances   |dff_254                |     1|
+|17    |      \dff16_inst[10].instances  |dff_255                |     1|
+|18    |      \dff16_inst[11].instances  |dff_256                |     1|
+|19    |      \dff16_inst[12].instances  |dff_257                |     1|
+|20    |      \dff16_inst[13].instances  |dff_258                |     1|
+|21    |      \dff16_inst[14].instances  |dff_259                |     1|
+|22    |      \dff16_inst[15].instances  |dff_260                |     1|
+|23    |      \dff16_inst[1].instances   |dff_261                |     1|
+|24    |      \dff16_inst[2].instances   |dff_262                |     1|
+|25    |      \dff16_inst[3].instances   |dff_263                |     1|
+|26    |      \dff16_inst[4].instances   |dff_264                |     1|
+|27    |      \dff16_inst[5].instances   |dff_265                |     1|
+|28    |      \dff16_inst[6].instances   |dff_266                |     1|
+|29    |      \dff16_inst[7].instances   |dff_267                |     1|
+|30    |      \dff16_inst[8].instances   |dff_268                |     1|
+|31    |      \dff16_inst[9].instances   |dff_269                |     1|
+|32    |    \register_instances[10].Rn   |register_16bit_0       |    16|
+|33    |      \dff16_inst[0].instances   |dff_238                |     1|
+|34    |      \dff16_inst[10].instances  |dff_239                |     1|
+|35    |      \dff16_inst[11].instances  |dff_240                |     1|
+|36    |      \dff16_inst[12].instances  |dff_241                |     1|
+|37    |      \dff16_inst[13].instances  |dff_242                |     1|
+|38    |      \dff16_inst[14].instances  |dff_243                |     1|
+|39    |      \dff16_inst[15].instances  |dff_244                |     1|
+|40    |      \dff16_inst[1].instances   |dff_245                |     1|
+|41    |      \dff16_inst[2].instances   |dff_246                |     1|
+|42    |      \dff16_inst[3].instances   |dff_247                |     1|
+|43    |      \dff16_inst[4].instances   |dff_248                |     1|
+|44    |      \dff16_inst[5].instances   |dff_249                |     1|
+|45    |      \dff16_inst[6].instances   |dff_250                |     1|
+|46    |      \dff16_inst[7].instances   |dff_251                |     1|
+|47    |      \dff16_inst[8].instances   |dff_252                |     1|
+|48    |      \dff16_inst[9].instances   |dff_253                |     1|
+|49    |    \register_instances[11].Rn   |register_16bit_1       |    80|
+|50    |      \dff16_inst[0].instances   |dff_222                |     5|
+|51    |      \dff16_inst[10].instances  |dff_223                |     5|
+|52    |      \dff16_inst[11].instances  |dff_224                |     5|
+|53    |      \dff16_inst[12].instances  |dff_225                |     5|
+|54    |      \dff16_inst[13].instances  |dff_226                |     5|
+|55    |      \dff16_inst[14].instances  |dff_227                |     5|
+|56    |      \dff16_inst[15].instances  |dff_228                |     5|
+|57    |      \dff16_inst[1].instances   |dff_229                |     5|
+|58    |      \dff16_inst[2].instances   |dff_230                |     5|
+|59    |      \dff16_inst[3].instances   |dff_231                |     5|
+|60    |      \dff16_inst[4].instances   |dff_232                |     5|
+|61    |      \dff16_inst[5].instances   |dff_233                |     5|
+|62    |      \dff16_inst[6].instances   |dff_234                |     5|
+|63    |      \dff16_inst[7].instances   |dff_235                |     5|
+|64    |      \dff16_inst[8].instances   |dff_236                |     5|
+|65    |      \dff16_inst[9].instances   |dff_237                |     5|
+|66    |    \register_instances[12].Rn   |register_16bit_2       |    16|
+|67    |      \dff16_inst[0].instances   |dff_206                |     1|
+|68    |      \dff16_inst[10].instances  |dff_207                |     1|
+|69    |      \dff16_inst[11].instances  |dff_208                |     1|
+|70    |      \dff16_inst[12].instances  |dff_209                |     1|
+|71    |      \dff16_inst[13].instances  |dff_210                |     1|
+|72    |      \dff16_inst[14].instances  |dff_211                |     1|
+|73    |      \dff16_inst[15].instances  |dff_212                |     1|
+|74    |      \dff16_inst[1].instances   |dff_213                |     1|
+|75    |      \dff16_inst[2].instances   |dff_214                |     1|
+|76    |      \dff16_inst[3].instances   |dff_215                |     1|
+|77    |      \dff16_inst[4].instances   |dff_216                |     1|
+|78    |      \dff16_inst[5].instances   |dff_217                |     1|
+|79    |      \dff16_inst[6].instances   |dff_218                |     1|
+|80    |      \dff16_inst[7].instances   |dff_219                |     1|
+|81    |      \dff16_inst[8].instances   |dff_220                |     1|
+|82    |      \dff16_inst[9].instances   |dff_221                |     1|
+|83    |    \register_instances[13].Rn   |register_16bit_3       |    16|
+|84    |      \dff16_inst[0].instances   |dff_190                |     1|
+|85    |      \dff16_inst[10].instances  |dff_191                |     1|
+|86    |      \dff16_inst[11].instances  |dff_192                |     1|
+|87    |      \dff16_inst[12].instances  |dff_193                |     1|
+|88    |      \dff16_inst[13].instances  |dff_194                |     1|
+|89    |      \dff16_inst[14].instances  |dff_195                |     1|
+|90    |      \dff16_inst[15].instances  |dff_196                |     1|
+|91    |      \dff16_inst[1].instances   |dff_197                |     1|
+|92    |      \dff16_inst[2].instances   |dff_198                |     1|
+|93    |      \dff16_inst[3].instances   |dff_199                |     1|
+|94    |      \dff16_inst[4].instances   |dff_200                |     1|
+|95    |      \dff16_inst[5].instances   |dff_201                |     1|
+|96    |      \dff16_inst[6].instances   |dff_202                |     1|
+|97    |      \dff16_inst[7].instances   |dff_203                |     1|
+|98    |      \dff16_inst[8].instances   |dff_204                |     1|
+|99    |      \dff16_inst[9].instances   |dff_205                |     1|
+|100   |    \register_instances[14].Rn   |register_16bit_4       |    16|
+|101   |      \dff16_inst[0].instances   |dff_174                |     1|
+|102   |      \dff16_inst[10].instances  |dff_175                |     1|
+|103   |      \dff16_inst[11].instances  |dff_176                |     1|
+|104   |      \dff16_inst[12].instances  |dff_177                |     1|
+|105   |      \dff16_inst[13].instances  |dff_178                |     1|
+|106   |      \dff16_inst[14].instances  |dff_179                |     1|
+|107   |      \dff16_inst[15].instances  |dff_180                |     1|
+|108   |      \dff16_inst[1].instances   |dff_181                |     1|
+|109   |      \dff16_inst[2].instances   |dff_182                |     1|
+|110   |      \dff16_inst[3].instances   |dff_183                |     1|
+|111   |      \dff16_inst[4].instances   |dff_184                |     1|
+|112   |      \dff16_inst[5].instances   |dff_185                |     1|
+|113   |      \dff16_inst[6].instances   |dff_186                |     1|
+|114   |      \dff16_inst[7].instances   |dff_187                |     1|
+|115   |      \dff16_inst[8].instances   |dff_188                |     1|
+|116   |      \dff16_inst[9].instances   |dff_189                |     1|
+|117   |    \register_instances[15].Rn   |register_16bit_5       |    48|
+|118   |      \dff16_inst[0].instances   |dff_158                |     3|
+|119   |      \dff16_inst[10].instances  |dff_159                |     3|
+|120   |      \dff16_inst[11].instances  |dff_160                |     3|
+|121   |      \dff16_inst[12].instances  |dff_161                |     3|
+|122   |      \dff16_inst[13].instances  |dff_162                |     3|
+|123   |      \dff16_inst[14].instances  |dff_163                |     3|
+|124   |      \dff16_inst[15].instances  |dff_164                |     3|
+|125   |      \dff16_inst[1].instances   |dff_165                |     3|
+|126   |      \dff16_inst[2].instances   |dff_166                |     3|
+|127   |      \dff16_inst[3].instances   |dff_167                |     3|
+|128   |      \dff16_inst[4].instances   |dff_168                |     3|
+|129   |      \dff16_inst[5].instances   |dff_169                |     3|
+|130   |      \dff16_inst[6].instances   |dff_170                |     3|
+|131   |      \dff16_inst[7].instances   |dff_171                |     3|
+|132   |      \dff16_inst[8].instances   |dff_172                |     3|
+|133   |      \dff16_inst[9].instances   |dff_173                |     3|
+|134   |    \register_instances[1].Rn    |register_16bit_6       |    16|
+|135   |      \dff16_inst[0].instances   |dff_142                |     1|
+|136   |      \dff16_inst[10].instances  |dff_143                |     1|
+|137   |      \dff16_inst[11].instances  |dff_144                |     1|
+|138   |      \dff16_inst[12].instances  |dff_145                |     1|
+|139   |      \dff16_inst[13].instances  |dff_146                |     1|
+|140   |      \dff16_inst[14].instances  |dff_147                |     1|
+|141   |      \dff16_inst[15].instances  |dff_148                |     1|
+|142   |      \dff16_inst[1].instances   |dff_149                |     1|
+|143   |      \dff16_inst[2].instances   |dff_150                |     1|
+|144   |      \dff16_inst[3].instances   |dff_151                |     1|
+|145   |      \dff16_inst[4].instances   |dff_152                |     1|
+|146   |      \dff16_inst[5].instances   |dff_153                |     1|
+|147   |      \dff16_inst[6].instances   |dff_154                |     1|
+|148   |      \dff16_inst[7].instances   |dff_155                |     1|
+|149   |      \dff16_inst[8].instances   |dff_156                |     1|
+|150   |      \dff16_inst[9].instances   |dff_157                |     1|
+|151   |    \register_instances[2].Rn    |register_16bit_7       |    16|
+|152   |      \dff16_inst[0].instances   |dff_126                |     1|
+|153   |      \dff16_inst[10].instances  |dff_127                |     1|
+|154   |      \dff16_inst[11].instances  |dff_128                |     1|
+|155   |      \dff16_inst[12].instances  |dff_129                |     1|
+|156   |      \dff16_inst[13].instances  |dff_130                |     1|
+|157   |      \dff16_inst[14].instances  |dff_131                |     1|
+|158   |      \dff16_inst[15].instances  |dff_132                |     1|
+|159   |      \dff16_inst[1].instances   |dff_133                |     1|
+|160   |      \dff16_inst[2].instances   |dff_134                |     1|
+|161   |      \dff16_inst[3].instances   |dff_135                |     1|
+|162   |      \dff16_inst[4].instances   |dff_136                |     1|
+|163   |      \dff16_inst[5].instances   |dff_137                |     1|
+|164   |      \dff16_inst[6].instances   |dff_138                |     1|
+|165   |      \dff16_inst[7].instances   |dff_139                |     1|
+|166   |      \dff16_inst[8].instances   |dff_140                |     1|
+|167   |      \dff16_inst[9].instances   |dff_141                |     1|
+|168   |    \register_instances[3].Rn    |register_16bit_8       |   804|
+|169   |      \dff16_inst[0].instances   |dff_110                |    25|
+|170   |      \dff16_inst[10].instances  |dff_111                |    61|
+|171   |      \dff16_inst[11].instances  |dff_112                |    63|
+|172   |      \dff16_inst[12].instances  |dff_113                |    60|
+|173   |      \dff16_inst[13].instances  |dff_114                |    38|
+|174   |      \dff16_inst[14].instances  |dff_115                |    42|
+|175   |      \dff16_inst[15].instances  |dff_116                |    87|
+|176   |      \dff16_inst[1].instances   |dff_117                |    17|
+|177   |      \dff16_inst[2].instances   |dff_118                |    12|
+|178   |      \dff16_inst[3].instances   |dff_119                |    26|
+|179   |      \dff16_inst[4].instances   |dff_120                |    68|
+|180   |      \dff16_inst[5].instances   |dff_121                |    55|
+|181   |      \dff16_inst[6].instances   |dff_122                |    58|
+|182   |      \dff16_inst[7].instances   |dff_123                |    65|
+|183   |      \dff16_inst[8].instances   |dff_124                |    63|
+|184   |      \dff16_inst[9].instances   |dff_125                |    64|
+|185   |    \register_instances[4].Rn    |register_16bit_9       |    16|
+|186   |      \dff16_inst[0].instances   |dff_94                 |     1|
+|187   |      \dff16_inst[10].instances  |dff_95                 |     1|
+|188   |      \dff16_inst[11].instances  |dff_96                 |     1|
+|189   |      \dff16_inst[12].instances  |dff_97                 |     1|
+|190   |      \dff16_inst[13].instances  |dff_98                 |     1|
+|191   |      \dff16_inst[14].instances  |dff_99                 |     1|
+|192   |      \dff16_inst[15].instances  |dff_100                |     1|
+|193   |      \dff16_inst[1].instances   |dff_101                |     1|
+|194   |      \dff16_inst[2].instances   |dff_102                |     1|
+|195   |      \dff16_inst[3].instances   |dff_103                |     1|
+|196   |      \dff16_inst[4].instances   |dff_104                |     1|
+|197   |      \dff16_inst[5].instances   |dff_105                |     1|
+|198   |      \dff16_inst[6].instances   |dff_106                |     1|
+|199   |      \dff16_inst[7].instances   |dff_107                |     1|
+|200   |      \dff16_inst[8].instances   |dff_108                |     1|
+|201   |      \dff16_inst[9].instances   |dff_109                |     1|
+|202   |    \register_instances[5].Rn    |register_16bit_10      |    16|
+|203   |      \dff16_inst[0].instances   |dff_78                 |     1|
+|204   |      \dff16_inst[10].instances  |dff_79                 |     1|
+|205   |      \dff16_inst[11].instances  |dff_80                 |     1|
+|206   |      \dff16_inst[12].instances  |dff_81                 |     1|
+|207   |      \dff16_inst[13].instances  |dff_82                 |     1|
+|208   |      \dff16_inst[14].instances  |dff_83                 |     1|
+|209   |      \dff16_inst[15].instances  |dff_84                 |     1|
+|210   |      \dff16_inst[1].instances   |dff_85                 |     1|
+|211   |      \dff16_inst[2].instances   |dff_86                 |     1|
+|212   |      \dff16_inst[3].instances   |dff_87                 |     1|
+|213   |      \dff16_inst[4].instances   |dff_88                 |     1|
+|214   |      \dff16_inst[5].instances   |dff_89                 |     1|
+|215   |      \dff16_inst[6].instances   |dff_90                 |     1|
+|216   |      \dff16_inst[7].instances   |dff_91                 |     1|
+|217   |      \dff16_inst[8].instances   |dff_92                 |     1|
+|218   |      \dff16_inst[9].instances   |dff_93                 |     1|
+|219   |    \register_instances[6].Rn    |register_16bit_11      |    16|
+|220   |      \dff16_inst[0].instances   |dff_62                 |     1|
+|221   |      \dff16_inst[10].instances  |dff_63                 |     1|
+|222   |      \dff16_inst[11].instances  |dff_64                 |     1|
+|223   |      \dff16_inst[12].instances  |dff_65                 |     1|
+|224   |      \dff16_inst[13].instances  |dff_66                 |     1|
+|225   |      \dff16_inst[14].instances  |dff_67                 |     1|
+|226   |      \dff16_inst[15].instances  |dff_68                 |     1|
+|227   |      \dff16_inst[1].instances   |dff_69                 |     1|
+|228   |      \dff16_inst[2].instances   |dff_70                 |     1|
+|229   |      \dff16_inst[3].instances   |dff_71                 |     1|
+|230   |      \dff16_inst[4].instances   |dff_72                 |     1|
+|231   |      \dff16_inst[5].instances   |dff_73                 |     1|
+|232   |      \dff16_inst[6].instances   |dff_74                 |     1|
+|233   |      \dff16_inst[7].instances   |dff_75                 |     1|
+|234   |      \dff16_inst[8].instances   |dff_76                 |     1|
+|235   |      \dff16_inst[9].instances   |dff_77                 |     1|
+|236   |    \register_instances[7].Rn    |register_16bit_12      |    48|
+|237   |      \dff16_inst[0].instances   |dff_46                 |     3|
+|238   |      \dff16_inst[10].instances  |dff_47                 |     3|
+|239   |      \dff16_inst[11].instances  |dff_48                 |     3|
+|240   |      \dff16_inst[12].instances  |dff_49                 |     3|
+|241   |      \dff16_inst[13].instances  |dff_50                 |     3|
+|242   |      \dff16_inst[14].instances  |dff_51                 |     3|
+|243   |      \dff16_inst[15].instances  |dff_52                 |     3|
+|244   |      \dff16_inst[1].instances   |dff_53                 |     3|
+|245   |      \dff16_inst[2].instances   |dff_54                 |     3|
+|246   |      \dff16_inst[3].instances   |dff_55                 |     3|
+|247   |      \dff16_inst[4].instances   |dff_56                 |     3|
+|248   |      \dff16_inst[5].instances   |dff_57                 |     3|
+|249   |      \dff16_inst[6].instances   |dff_58                 |     3|
+|250   |      \dff16_inst[7].instances   |dff_59                 |     3|
+|251   |      \dff16_inst[8].instances   |dff_60                 |     3|
+|252   |      \dff16_inst[9].instances   |dff_61                 |     3|
+|253   |    \register_instances[8].Rn    |register_16bit_13      |    16|
+|254   |      \dff16_inst[0].instances   |dff_30                 |     1|
+|255   |      \dff16_inst[10].instances  |dff_31                 |     1|
+|256   |      \dff16_inst[11].instances  |dff_32                 |     1|
+|257   |      \dff16_inst[12].instances  |dff_33                 |     1|
+|258   |      \dff16_inst[13].instances  |dff_34                 |     1|
+|259   |      \dff16_inst[14].instances  |dff_35                 |     1|
+|260   |      \dff16_inst[15].instances  |dff_36                 |     1|
+|261   |      \dff16_inst[1].instances   |dff_37                 |     1|
+|262   |      \dff16_inst[2].instances   |dff_38                 |     1|
+|263   |      \dff16_inst[3].instances   |dff_39                 |     1|
+|264   |      \dff16_inst[4].instances   |dff_40                 |     1|
+|265   |      \dff16_inst[5].instances   |dff_41                 |     1|
+|266   |      \dff16_inst[6].instances   |dff_42                 |     1|
+|267   |      \dff16_inst[7].instances   |dff_43                 |     1|
+|268   |      \dff16_inst[8].instances   |dff_44                 |     1|
+|269   |      \dff16_inst[9].instances   |dff_45                 |     1|
+|270   |    \register_instances[9].Rn    |register_16bit_14      |    16|
+|271   |      \dff16_inst[0].instances   |dff                    |     1|
+|272   |      \dff16_inst[10].instances  |dff_15                 |     1|
+|273   |      \dff16_inst[11].instances  |dff_16                 |     1|
+|274   |      \dff16_inst[12].instances  |dff_17                 |     1|
+|275   |      \dff16_inst[13].instances  |dff_18                 |     1|
+|276   |      \dff16_inst[14].instances  |dff_19                 |     1|
+|277   |      \dff16_inst[15].instances  |dff_20                 |     1|
+|278   |      \dff16_inst[1].instances   |dff_21                 |     1|
+|279   |      \dff16_inst[2].instances   |dff_22                 |     1|
+|280   |      \dff16_inst[3].instances   |dff_23                 |     1|
+|281   |      \dff16_inst[4].instances   |dff_24                 |     1|
+|282   |      \dff16_inst[5].instances   |dff_25                 |     1|
+|283   |      \dff16_inst[6].instances   |dff_26                 |     1|
+|284   |      \dff16_inst[7].instances   |dff_27                 |     1|
+|285   |      \dff16_inst[8].instances   |dff_28                 |     1|
+|286   |      \dff16_inst[9].instances   |dff_29                 |     1|
++------+---------------------------------+-----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1271.465 ; gain = 967.398
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1271.465 ; gain = 967.398
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1271.465 ; gain = 967.398
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1289.516 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 284 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1405.422 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 16 instances
+
+Synth Design complete | Checksum: ebe3ec69
+INFO: [Common 17-83] Releasing license: Synthesis
+81 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1405.422 ; gain = 1107.465
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1405.422 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/digital/hv_project/hv_project.runs/synth_1/cpu_datapath.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file cpu_datapath_utilization_synth.rpt -pb cpu_datapath_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 20 13:06:21 2026...
